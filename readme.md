@@ -44,4 +44,8 @@ Modulo 2:
 
     02- Uso de porcentagem (a porcentagem é de acrodo com a tag pai) e Dev Tools para mudar tamanho de dispositivo
 
+    03- Media Queries ( @media (max-width: 960px) {})
+
+    04- Github
+
 -->

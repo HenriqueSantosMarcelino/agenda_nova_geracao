@@ -136,7 +136,7 @@ body {
     padding: 24px;
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 .rodape__p {
@@ -147,7 +147,47 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
 }
+
+@media (max-width: 960px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .cabecalho {
+        padding: 6%
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao__conteudo {
+        width: 95%;
+        gap: 20px;
+    }
+    .apresentacao__imagem {
+        width: 70%;
+        margin: 5% 0%;
+    }
+    .apresentacao__conteudo__titulo {
+        font-size: 1.7rem;
+    }
+    .cabecalho__menu__link {
+        font-size: 1.3rem;
+    }
+    .apresentacao__conteudo__texto {
+        font-size: 1.3rem;
+    }
+    .apresentacao__links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .rodape {
+        font-size: 1.2rem;
+    }
+}
 /* INDEX FIM */
+
+
+
 
 /* AGENDA INICIO */
 
