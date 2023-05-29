@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #00e846;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+
+    
+    box-sizing: border-box;
+    color: var(--cor-secundaria);
+    background-color: #f5f5f5
+}
+
+/* INDEX INICIO */
+
+.cabecalho {
+    padding: 2% 0% 1% 15%;
+    background-color: var(--cor-terciaria);
+}
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section__tabela {
+    background: rgba(227, 227, 227, 0.79);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2%;
+    padding: 2%;
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.tabela__titulo {
+    font-size: 2rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+}
+
+.tabela__conteudo {
+    font-size: 1.4rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-primaria);
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Ajuste o valor da margem vertical conforme necessário */
+}    
+
+
+tr {
+    height: 10vh;    
+}
+td, th  { 
+    border-bottom: solid 2px; 
+    padding: 10px;
+    border-color: #cfcfcf;
+    margin: 10px;    
+}
+td:first-child { 
+    width: 70%  
+}
+td:first-child + td {  
+    width: 10% 
+}
+td:first-child + td + td {  
+    width: 10% 
+}
+td:first-child + td + td + td {  
+    width: 10% 
+}
+
+input[type='checkbox'] {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+td.tabela__conteudo__titulo {
+    text-align: start;
+}
+
+
+
+
+.rodape {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+
+
+@media (max-width: 960px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .cabecalho {
+        padding: 6%
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao__conteudo {
+        width: 95%;
+        gap: 20px;
+    }
+    .apresentacao__imagem {
+        width: 70%;
+        margin: 5% 0%;
+    }
+    .apresentacao__conteudo__titulo {
+        font-size: 1.7rem;
+    }
+    .cabecalho__menu__link {
+        font-size: 1.3rem;
+    }
+    .apresentacao__conteudo__texto {
+        font-size: 1.3rem;
+    }
+    .apresentacao__links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .rodape {
+        font-size: 1.2rem;
+    }
+}
+/* INDEX FIM */
+
+
+
+
+/* AGENDA INICIO */
+
+
