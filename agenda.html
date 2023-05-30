@@ -2,112 +2,107 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
-    <link rel="stylesheet" href="./styles/style_agenda.css">
-    
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda</title>
+  <link rel="stylesheet" href="./styles/style_agenda.css">
+
+
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Agenda</a>
-        </nav>
-    </header>
+  <header class="cabecalho">
+    <nav class="cabecalho__menu">
+      <a class="cabecalho__menu__link" href="index.html">Home</a>
+      <a class="cabecalho__menu__link" href="about.html">Agenda</a>
+    </nav>
+  </header>
+
+  <main class="apresentacao">
+
+    <section class="container__tabela">
+      <h2 class="tabela__titulo">Módulo 2</h2>
+      <table class="tabela__conteudo">
+        <tbody>
+          <tr>
+            <th>
+              <h4 class="tabela__conteudo__titulo">Criar suas primeiras páginas web</h4>
+            </th>
+            <th>
+              <h5>Não assisti</h5>
+            </th>
+            <th>
+              <h5>Não entendi</h5>
+            </th>
+            <th>
+              <h5>Preciso Revisar</h5>
+            </th>
+            <th>
+              <h5>Fiz e aprendi</h5>
+            </th>
+          </tr>
+          <tr>
+            <td class="tabela__conteudo__titulo">HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags
+            </td>
+            <!-- referência dos nomes: M2 (Módulo 2 ) _ C1 (Curso 1) -->
+            <div class="tabela__conteudo__div">
+              <td><input type="radio" name="M2_C1" value="Não assisti" /></td>
+              <td><input type="radio" name="M2_C1" value="Não entendi" /></td>
+              <td><input type="radio" name="M2_C1" value="Preciso Revisar" /></td>
+              <td><input type="radio" name="M2_C1" value="Entendi Bem" /></td>
+            </div>
+          </tr>
+          <tr>
+            <td class="tabela__conteudo__titulo">HTML e CSS: Classes, posicionamento e Flexbox</td>
+            <td><input type="radio" name="M2_C2" value="Não assisti" /></td>
+            <td><input type="radio" name="M2_C2" value="Não entendi" /></td>
+            <td><input type="radio" name="M2_C2" value="Preciso Revisar" /></td>
+            <td><input type="radio" name="M2_C2" value="Entendi Bem" /></td>
+          </tr>
+          <tr >
+            <td class="timer__tabela" colspan="5">
+              <div class="cronometro__finalizado" id="semana1CSS"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="tabela__conteudo">
+        <tbody>
+          <tr>
+            <td class="tabela__conteudo__titulo">HTML e CSS: cabeçalho, footer e variáveis CSS</td>
+            <!-- <td><input type="radio" name="M2_C3" value="Não assisti" /></td>
+            <td><input type="radio" name="M2_C3" value="Não entendi" /></td>
+            <td><input type="radio" name="M2_C3" value="Preciso Revisar" /></td>
+            <td><input type="radio" name="M2_C3" value="Entendi Bem" /></td> -->
+          </tr>
+          <tr>
+            <td class="tabela__conteudo__titulo">HTML e CSS: trabalhando com responsividade e publicação de projetos
+            </td>
+            <!-- <td><input type="radio" name="M2_C4" value="Não assisti" /></td>
+            <td><input type="radio" name="M2_C4" value="Não entendi" /></td>
+            <td><input type="radio" name="M2_C4" value="Preciso Revisar" /></td>
+            <td><input type="radio" name="M2_C4" value="Entendi Bem" /></td> -->
+          </tr>
+          <tr>
+            <td colspan="5">
+              <div class="cronometro" id="semana2CSS"></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </section>
+
     
-    <main class="apresentacao">
-        
-        <section class="container__tabela">
-            <h2 class="tabela__titulo">Módulo 2</h2>
-            <table class="tabela__conteudo">
-                <tbody>
-                  <tr>
-                    <th>
-                      <h4 class="tabela__conteudo__titulo">Criar suas primeiras páginas web</h4>
-                    </th>
-                    <th>
-                        <h5>Não assisti</h5>
-                      </th>
-                    <th>
-                      <h5>Não entendi</h5>
-                    </th>
-                    <th>
-                      <h5>Preciso Revisar</h5>
-                    </th>
-                    <th>
-                      <h5>Fiz e aprendi</h5>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td class="tabela__conteudo__titulo">HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags</td>
-                    <!-- referência dos nomes: M2 (Módulo 2 ) _ C1 (Curso 1) -->
-                    <td><input type="radio" name="M2_C1" value="Não assisti" /></td>
-                    <td><input type="radio" name="M2_C1" value="Não entendi" /></td>
-                    <td><input type="radio" name="M2_C1" value="Preciso Revisar" /></td>
-                    <td><input type="radio" name="M2_C1" value="Entendi Bem" /></td>
-                  </tr>
-                  <tr>
-                    <td class="tabela__conteudo__titulo">HTML e CSS: Classes, posicionamento e Flexbox</td>
-                    <td><input type="radio" name="M2_C2" value="Não assisti" /></td>
-                    <td><input type="radio" name="M2_C2" value="Não entendi" /></td>
-                    <td><input type="radio" name="M2_C2" value="Preciso Revisar" /></td>
-                    <td><input type="radio" name="M2_C2" value="Entendi Bem" /></td>
-                  </tr>
-                  <tr>
-                    <td colspan="5" class="cronometro">
-                        <div id="timer"></div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="tabela__conteudo__titulo">HTML e CSS: cabeçalho, footer e variáveis CSS</td>
-                    <td><input type="radio" name="M2_C3" value="Não assisti" /></td>
-                    <td><input type="radio" name="M2_C3" value="Não entendi" /></td>
-                    <td><input type="radio" name="M2_C3" value="Preciso Revisar" /></td>
-                    <td><input type="radio" name="M2_C3" value="Entendi Bem" /></td>
-                  </tr>
-                  <tr>
-                    <td class="tabela__conteudo__titulo">HTML e CSS: trabalhando com responsividade e publicação de projetos</td>
-                    <td><input type="radio" name="M2_C4" value="Não assisti" /></td>
-                    <td><input type="radio" name="M2_C4" value="Não entendi" /></td>
-                    <td><input type="radio" name="M2_C4" value="Preciso Revisar" /></td>
-                    <td><input type="radio" name="M2_C4" value="Entendi Bem" /></td>
-                  </tr>
-                </tbody>
-              </table>                
-        </section>
-        
-        <section class="container__tabela">
-            <h2 class="tabela__titulo">Módulo 3</h2>
-                <table class="tabela__conteudo">
-                    <tbody>
-                            <tr>
-                                <th><h4 class="tabela__conteudo__titulo"> Aprender a lógica de programação </h4></th>
-                                <th><h5>Não entendi</h5></th>
-                                <th><h5>Preciso Revisar</h5></th>
-                                <th><h5>Fiz e aprendi</h5></th>
-                            </tr>
-                            <tr>
-                                <td class="tabela__conteudo__titulo">JavaScript e HTML: desenvolva um jogo e pratique lógica de programação</td>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /></td>
-                                <td><input type="checkbox" /></td>
-                            </tr>
-                            
-                    </tbody>
-                </table>                
-        </section>
-    
-    </main>
-    <footer class="rodape">
-        <p >Desenvolvido por <strong>Henrique Santos.</strong> Feito com objetivo de aprendizado. NÃO possui qualquer
-            vínculo com a direção do programa.</p>
-    </footer>
+
+  </main>
+  <footer class="rodape">
+    <p>Desenvolvido por <strong>Henrique Santos.</strong> Feito com objetivo de aprendizado. NÃO possui qualquer
+      vínculo com a direção do programa.</p>
+  </footer>
 </body>
-<script src="js/salvar_dados.js" ></script>
-<script src="js/temporizador.js" ></script>
+<script src="js/salvar_dados.js"></script>
+<script src="js/temporizador.js"></script>
 
 </html>
