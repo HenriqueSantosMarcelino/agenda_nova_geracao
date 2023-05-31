@@ -35,149 +35,126 @@ body {
     color: var(--cor-primaria);
     text-decoration: none;
 }
+
 .apresentacao {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
-.container__tabela {
+
+
+.container__tabela { /*section PAI da tabela*/
     background: var(--cor-container);
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
     margin: 2%;
     padding: 2%;
-    display: flex;
-    width: 70%;
-    flex-direction: column;
-    gap: 10px;
+    width: 80%;
+}
+.tabela__conteudo { /* table PAI dos td */
+    font-size: 1.4rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-primaria);
+    width: 100%;
 }
 .tabela__titulo {
     font-size: 2rem;
     font-family: var(--fonte-primaria);
     color: var(--cor-primaria);
+    padding: 8px 0px;
 }
-.tabela__conteudo {
+.tabela__subtitulo {
     font-size: 1.4rem;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+}
+.tabela__subtitulo__semana {
+
+    font-size: 1.2rem;
+    font-weight: 800;
     font-family: var(--fonte-secundaria);
     color: var(--cor-primaria);
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
 }
 tr {
-    height: 10vh;
-}
-td {
-    border-bottom: solid 2px;
-    padding: 10px;
-    border-color: #cfcfcf;
-}
-td:first-child {
-    width: 60%;
-    text-align: start;
-}
-td:first-child+td {
-    width: 10%;
-    border: 8px solid var(--cor-container);
-    border-radius: 15px;
-}
-td:first-child+td+td {
-    width: 10%;
-    background-color: #ffcfcf;
-    border: 8px solid var(--cor-container);
-    border-radius: 15px;
+    height: 10vh; /* Altura das linhas da tabela */
 }
 
-td:first-child+td+td+td {
+td:first-child { /* Coluna 1 Titulo */
+    width: 60%;
+    text-align: start;
+    border-bottom: solid 2px;
+    border-color: #cfcfcf;
+}
+td:first-child+td, td:first-child+td+td, td:first-child+td+td+td, td:first-child+td+td+td+td { 
     width: 10%;
-    background-color: #fff9cf;
+    text-align: center;
     border: 8px solid var(--cor-container);
     border-radius: 15px;
 }
+td:first-child+td+td { /* Coluna 3 'NÃO ENTENDI' */
+    background-color: #ff6969;
+}
+td:first-child+td+td+td {
+    background-color: #ffeb69; /* Coluna 4 'PRECISO REVISAR' */
+}
 td:first-child+td+td+td+td {
-    width: 10%;
-    background-color: #d3ffcf;
-    border: 8px solid var(--cor-container);
-    border-radius: 15px;
+    background-color: #7dff69; /* Coluna 5 'FIZ E APRENDI' */
 }
 input[type='radio'] {
     width: 1.7rem;
     height: 1.7rem;
 }
+
 .cronometro {
-    width: 100%;
     color: #000000;
     font-family: var(--fonte-secundaria);
+
+    width: 100%;
 }
-.timer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.timer { /*div pai*/
     background-color: #f1ffeb;
     padding: 10px 0px;
-    border-bottom: 3px solid rgb(144, 181, 156);
-    margin-bottom: 10px;
-}
-.timer__finalizado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffd4d4;
-    padding: 10px 0px;
-    border-bottom: 3px solid rgb(181, 144, 144);
-    margin-bottom: 10px;
-}
-.timer__titulo {
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin: 0px 5px;
-    color: #00581a;
-}
-.timer__titulo__finalizado {
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin: 0px 5px;
-    color: #580000;
-}
-.timer__restante {
+    
     display: flex;
     flex-direction: column;
-    font-weight: 400;
-    font-size: 1.15rem;
-    justify-content: space-between;
     align-items: center;
-    width: 70px;
-    padding: 5px;
-    margin: 0px 2px;
+    justify-content: center;
+}
+.timer__titulo { /* "A semana X termina em:" */
+    color: #00581a;
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 0px 30px;
+}
+.timer__pai { /* Bloco pai do pai das variáveis*/
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    padding: 5px 25%;
+}
+.timer__restante {/* Blocos pai das variáveis*/
     background-color: #ffffff;
     border: 2px solid rgb(144, 181, 156);
     border-radius: 5px;
-}
-.timer__restante__finalizado {
-    display: flex;
-    flex-direction: column;
     font-weight: 400;
     font-size: 1.15rem;
-    justify-content: space-between;
-    align-items: center;
-    width: 70px;
+    
     padding: 5px;
     margin: 0px 2px;
-    background-color: #ffffff;
-    border: 2px solid rgb(181, 144, 144);
-    border-radius: 5px;
+    
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.timer__restante__diashoras {
-    font-weight: 600;
-    font-size: 1.5rem;
+.timer__restante__variaveis { /* Numeros variáveis */
     color: #00581a;
-}
-.timer__restante__diashoras__finalizado {
     font-weight: 600;
     font-size: 1.5rem;
-    color: #580000;
 }
+
 .rodape {
     background-color: var(--cor-terciaria);
     color: var(--cor-primaria);
@@ -189,86 +166,9 @@ input[type='radio'] {
 }
 
 @media (max-width: 960px) {
-    .timer__restante__finalizado {
-        padding: 10px;
-        width: 240px;
-        border-radius: 10px;
-
+    main {
+        background-color: rgb(35, 48, 37);
     }
-    .timer__finalizado {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #ffd4d4;
-        padding: 20px;
-        border-bottom: 0px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        width: 240px;
-    }
-    .apresentacao {
-        flex-direction: row;
-        padding: 5%;
-    }
-    .container__tabela {
-        background: #f8f8f8;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        margin: 2%;
-        padding: 2%;
-        display: flex;
-        width: 90%;
-        flex-direction: column;
-        gap: 10px;
-    }
-    h5 {
-        font-size: 1rem;
-        padding: 6px 6px;
-       }
-    th {
-        margin: -2px;
-    }
-    tr {
-        background-color: var(--cor-container-responsivo);
-        margin: 10px 0px;
-        padding: 5px 0px;
-        border-radius: 5px;
-        box-shadow: 0 4px 30px rgba(79, 79, 79, 0.1);
-        border: 1px solid #d8d8d8;
-        width: 100%;
-
-    }
-    td:first-child, th:first-child {
-        width: 90%;
-        text-align: center;
-        font-size: 1.2rem;
-        border: 0;
-    }
-    td:first-child+td, th:first-child+th {
-        width: 15%;
-        border: 8px solid var(--cor-container-responsivo);
-        border-radius: 15px;
-    }
-    td:first-child+td+td, th:first-child+th+th {
-        width: 15%;
-        background-color: #ffcfcf;
-        border: 8px solid var(--cor-container-responsivo);
-        border-radius: 15px;
-    }
-    
-    td:first-child+td+td+td, th:first-child+th+th+th {
-        width: 15%;
-        background-color: #fff9cf;
-        border: 8px solid var(--cor-container-responsivo);
-        border-radius: 15px;
-    }
-    td:first-child+td+td+td+td, th:first-child+th+th+th+th {
-        width: 15%;
-        background-color: #d3ffcf;
-        border: 8px solid var(--cor-container-responsivo);
-        border-radius: 15px;
-    }
-
     
     .cabecalho {
         padding: 6%
@@ -276,37 +176,127 @@ input[type='radio'] {
     .cabecalho__menu {
         justify-content: center;
     }
-    .apresentacao__conteudo {
-        width: 95%;
-        gap: 20px;
-    }
-    .container__tabela {
-        width: 100%;
-    }
-    .apresentacao__conteudo__titulo {
-        font-size: 1.7rem;
-    }
     .cabecalho__menu__link {
         font-size: 1.3rem;
     }
-    .apresentacao__conteudo__texto {
-        font-size: 1.3rem;
-    }
-    .apresentacao__links {
-        flex-direction: column;
-        gap: 15px;
-    }
+    
+    .container__tabela {/*<section> "MÓDULO 1, [...] ", pai dos articles*/
+        background: #fafffa;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        
+        margin: 6% 4%;
+        padding: 2%;
 
-    .tabela__conteudo, .tabela__conteudo tbody, .tabela__conteudo, tr, .tabela__conteudo td, th {
+        width: 100%;
+    }
+    .tabela__titulo { /* MODULOS*/
+        font-size: 1.65rem;
+        text-align: center;
+    }
+    article { /* Tables da mesma SEMANA */
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 3px 19px -13px rgba(0,0,0,0.75);
+        border: 1px solid rgb(241, 241, 241);
+
+        margin: 10px 0px;
+        padding: 20px 5px;
+    }
+    .tabela__subtitulo { 
+        font-size: 1.2rem;
+        
+        text-align: center;
+        padding: 0px 30px;
+    }
+    .tabela__subtitulo__semana {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 5px;
+        opacity: 0.8;
+    }
+    
+    .tabela__conteudo { /* tudo dentro da tag <table> */
+        padding: 10px 5px;
+    }
+    .tabela__conteudo, tbody, tr, td, th {
         display: inline-table;
-      }
-.timer__tabela {
-    width: 100%;
-}
-    .timer__finalizado {
-        display: inline-block;
-
     }
+    
+    tr {  /* mexe nas linhas da tabela */
+        background-color: #f5f5f5;
+        box-shadow: 0px 3px 15px -15px rgba(0,0,0,0.75);
+        border: 2px solid rgb(241, 241, 241);
+
+        border-radius: 5px;
+        text-align: center;
+        
+        margin: 8px 0px;
+        padding: 5px 0px;
+        
+        width: 100%;
+    }
+    
+    /* INICIO Ajuste da PRIMEIRA 1° linha tabela: "NÃO ASSISTI", [...]" */
+    h5 { /* Fonte índice*/
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+    thead > tr {
+        height: auto;
+    }
+    thead > tr > td:first-child, thead > tr > td:first-child +td, thead > tr > td:first-child+td+td, thead > tr > td:first-child+td+td+td  {
+        border: 4px solid #f5f5f5;
+        border-radius: 10px;
+
+        padding: 2% 0%;
+        width: 20%;
+    }
+    thead > tr > td:first-child +td {
+        background-color: #ff6969;
+    }
+    thead > tr > td:first-child+td+td {
+        background-color: #ffeb69;
+    }
+    thead > tr > td:first-child+td+td+td {
+        background-color: #7dff69
+    }
+    /* FIM Ajuste da PRIMEIRA 1° linha tabela: "NÃO ASSISTI", [...]" */
+
+    /* INICIO largura colunas dos cursos */
+    td:first-child  { /* Pai da "tag <título>" do curso */
+        font-size: 1.2rem;
+        border: 0;
+        
+        width: 100%;
+        text-align: center;
+    }
+    td:first-child+td, td:first-child+td+td, td:first-child+td+td+td, td:first-child+td+td+td+td {
+        border: 4px solid #f5f5f5;
+        border-radius: 10px;
+
+        padding: 2% 0%;
+        width: 20%;
+     }
+    input[type='radio'] {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+    /* FIM largura colunas dos cursos */
+
+    .cronometro {
+        display: inline-block;
+    }
+    tfoot > tr {
+        background-color: inherit;
+        box-shadow: none;
+        border: none;
+        border-radius: 8px;
+
+        margin: 0;
+        padding: 0;
+    }
+
     .rodape {
         font-size: 1.2rem;
     }

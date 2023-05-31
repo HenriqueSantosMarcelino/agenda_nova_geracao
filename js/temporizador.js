@@ -21,15 +21,63 @@ function exibirTempoRestante(dataFinal, elemento) {
     var tempoRestante = calcularTempoRestante(dataFinal);
 
     timerElemento.innerHTML =
-                              '<div class="timer"><div class="timer__titulo">Estou dentro do <br><h3>Cronograma?</h3></div>' 
-                             + '<div class="timer__restante"><div class="timer__restante__diashoras">' + tempoRestante.dias + ' </div><div>Dia(s)</div></div> '
-                             + ' <div class="timer__restante"><div class=timer__restante__diashoras> ' + tempoRestante.horas + '</div><div>Hora(s)</div></div></div> ';
+                              '<div class="timer">' +
+                                '<div class="timer__titulo">' +
+                                  'Estou dentro do <br><h3>Cronograma?</h3>' +
+                                '</div>' +
+
+                                '<div class="timer__pai">' +
+                                  '<div class="timer__restante">' +
+                                    '<div class="timer__restante__variaveis">' +
+                                      tempoRestante.dias + 
+                                    '</div>' +
+                                    '<div class="timer__restante__constantes">' +
+                                      'Dia(s)' +
+                                    '</div>' +
+                                  '</div>' +
+                                
+                                  '<div class="timer__restante">' +
+                                    '<div class=timer__restante__variaveis>' + 
+                                      tempoRestante.horas +
+                                    '</div>' +
+                                    '<div class="timer__restante__constantes">' +
+                                      'Hora(s)' +
+                                    '</div>' +
+                                  '</div>' +
+                                '</div>' +
+                              
+                              '</div>';
 
     // verifica se o tempo já chegou a zero
     if (tempoRestante.dias <= 0 && tempoRestante.horas <= 0) {
-      timerElemento.innerHTML = '<div class="timer__finalizado"><div class="timer__titulo__finalizado">Estou dentro do <br><h3>Cronograma?</h3></div>' 
-                              + '<div class="timer__restante__finalizado"><div class="timer__restante__diashoras__finalizado"> 0 </div><div>Dia(s)</div></div> '
-                              + ' <div class="timer__restante__finalizado"><div class=timer__restante__diashoras__finalizado> 0 </div><div>Hora(s)</div></div></div> '; 
+      timerElemento.innerHTML = 
+                                '<div class="timer" style="background-color:#ff8b8b;">' +
+                                  
+                                  '<div class="timer__titulo" style="color:#580000;">' +
+                                    'O prazo da SEMANA XX encerrou!' +
+                                  '</div>' +
+                                  
+                                  '<div class="timer__pai">' +
+                                    '<div class="timer__restante" style="border: 2px solid rgb(181, 144, 144);">' +
+                                      '<div class="timer__restante__variaveis" style="color:#580000;">' +
+                                        '0' +
+                                      '</div>' +
+                                      '<div class="timer__restante__constantes">' +
+                                        'Dia(s)' +
+                                      '</div>' +
+                                    '</div>' +
+                                    
+                                    '<div class="timer__restante" style="border: 2px solid rgb(181, 144, 144);">' + 
+                                      '<div class="timer__restante__variaveis" style="color:#580000;">' + 
+                                        '0' +
+                                      '</div>' +
+                                      '<div class="timer__restante__constantes">' +
+                                        'Hora(s)' +
+                                      '</div>' +
+                                    '</div>' +
+                                  '</div>' +
+                                
+                                '</div>'; 
       clearInterval(intervalID);
     }
   }
