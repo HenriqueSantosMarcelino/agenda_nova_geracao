@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@400&family=Montserrat:wght@400;600&display=swap');
 
 :root {
     --cor-primaria: #000000;
@@ -8,7 +8,7 @@
     --cor-container: rgb(227, 227, 227);
     --cor-container-responsivo: #e9e9e9;
 
-    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-primaria:   'Pridi', serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 * {
@@ -37,13 +37,16 @@ body {
 }
 
 .apresentacao {
+    background-color: rgb(35, 48, 37);
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 
 .container__tabela { /*section PAI da tabela*/
-    background: var(--cor-container);
+    background-color: #fafffa;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
@@ -51,6 +54,15 @@ body {
     padding: 2%;
     width: 80%;
 }
+article { /* Tables da mesma SEMANA */
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 3px 19px -13px rgba(0,0,0,0.75);
+        border: 1px solid rgb(241, 241, 241);
+
+        margin: 10px 0px;
+        padding: 20px 30px;
+    }
 .tabela__conteudo { /* table PAI dos td */
     font-size: 1.4rem;
     font-family: var(--fonte-secundaria);
@@ -58,13 +70,14 @@ body {
     width: 100%;
 }
 .tabela__titulo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: var(--fonte-primaria);
     color: var(--cor-primaria);
     padding: 8px 0px;
+    text-align: center;
 }
 .tabela__subtitulo {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 400;
     font-family: var(--fonte-primaria);
     color: var(--cor-primaria);
@@ -79,17 +92,21 @@ body {
 tr {
     height: 10vh; /* Altura das linhas da tabela */
 }
+h5 { /* Fonte índice*/
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 
 td:first-child { /* Coluna 1 Titulo */
     width: 60%;
     text-align: start;
-    border-bottom: solid 2px;
-    border-color: #cfcfcf;
+    border-top: 1px solid #cfcfcf;
+
 }
 td:first-child+td, td:first-child+td+td, td:first-child+td+td+td, td:first-child+td+td+td+td { 
     width: 10%;
     text-align: center;
-    border: 8px solid var(--cor-container);
+    border: 8px solid #ffffff;
     border-radius: 15px;
 }
 td:first-child+td+td { /* Coluna 3 'NÃO ENTENDI' */
@@ -166,10 +183,7 @@ input[type='radio'] {
 }
 
 @media (max-width: 960px) {
-    main {
-        background-color: rgb(35, 48, 37);
-    }
-    
+
     .cabecalho {
         padding: 6%
     }
@@ -179,19 +193,19 @@ input[type='radio'] {
     .cabecalho__menu__link {
         font-size: 1.3rem;
     }
-    
+
     .container__tabela {/*<section> "MÓDULO 1, [...] ", pai dos articles*/
         background: #fafffa;
         border-radius: 6px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         
-        margin: 6% 4%;
+        margin: 10px 4%;
         padding: 2%;
 
-        width: 100%;
+        width: auto;
     }
     .tabela__titulo { /* MODULOS*/
-        font-size: 1.65rem;
+        font-size: 2rem;
         text-align: center;
     }
     article { /* Tables da mesma SEMANA */
@@ -204,7 +218,8 @@ input[type='radio'] {
         padding: 20px 5px;
     }
     .tabela__subtitulo { 
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
         
         text-align: center;
         padding: 0px 30px;
@@ -238,10 +253,6 @@ input[type='radio'] {
     }
     
     /* INICIO Ajuste da PRIMEIRA 1° linha tabela: "NÃO ASSISTI", [...]" */
-    h5 { /* Fonte índice*/
-        font-size: 0.9rem;
-        opacity: 0.8;
-    }
     thead > tr {
         height: auto;
     }
@@ -251,15 +262,6 @@ input[type='radio'] {
 
         padding: 2% 0%;
         width: 20%;
-    }
-    thead > tr > td:first-child +td {
-        background-color: #ff6969;
-    }
-    thead > tr > td:first-child+td+td {
-        background-color: #ffeb69;
-    }
-    thead > tr > td:first-child+td+td+td {
-        background-color: #7dff69
     }
     /* FIM Ajuste da PRIMEIRA 1° linha tabela: "NÃO ASSISTI", [...]" */
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@300&family=Montserrat:wght@400;600&display=swap');
 
 :root {
     --cor-primaria: #000000;
@@ -6,7 +6,7 @@
     --cor-terciaria: #00e846;
     --cor-hover: #272727;
 
-    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-primaria: 'Pridi', serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 * {
@@ -69,7 +69,7 @@ body {
 
 }
 .apresentacao__conteudo {
-    background: rgba(7, 7, 7, 0.79);
+    background: rgba(25, 29, 25, 0.79);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -86,8 +86,9 @@ body {
 
 }
 .apresentacao__conteudo__titulo {
-    font-size: 2.25rem;
+    font-size: 2.8rem;
     font-family: var(--fonte-primaria);
+    line-height: 3rem;
 }
 .titulo-destaque {
     color: var(--cor-terciaria);
@@ -114,7 +115,7 @@ body {
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 378px;
+    width: 100%;
     text-align: center;
     border-radius: 8px;
     font-size: 1.5rem;
@@ -128,7 +129,6 @@ body {
     background-color: var(--cor-hover);
 }
 .rodape {
-
     background-color: var(--cor-terciaria);
     /* position: absolute;
     bottom: 0; */
@@ -146,6 +146,11 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
+}
+#logotipo_alura {
+    width: 28px;
+    height: 28px;
+    margin-right: -5px;
 }
 
 @media (max-width: 960px) {
@@ -168,7 +173,9 @@ body {
         margin: 5% 0%;
     }
     .apresentacao__conteudo__titulo {
-        font-size: 1.7rem;
+
+        font-size: 2.2rem;
+    line-height: 2.5rem;
     }
     .cabecalho__menu__link {
         font-size: 1.3rem;
